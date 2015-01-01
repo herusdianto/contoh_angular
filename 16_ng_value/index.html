@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html ng-app="app">
+	<head>
+		<title>16 - Ng Value</title>
+	</head>
+
+	<body>
+		<div ng-controller="ValueController">
+			<p>Nama: <strong>{{ orang.nama }}</strong></p>
+
+			<input type="radio" name="nama" ng-value=" 'Heru Rusdianto' " ng-model="orang.nama"> Heru Rusdianto
+			<input type="radio" name="nama" ng-value=" 'Ibnu Rusdianto' " ng-model="orang.nama"> Ibnu Rusdianto
+		</div>
+
+		<script src="../lib/angular.min.js"></script>
+		<script src="app.js"></script>
+	</body>
+</html>
