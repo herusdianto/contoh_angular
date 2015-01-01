@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html ng-app="app">
+	<head>
+		<title>17 - Ng Mousedown</title>
+	</head>
+
+	<body>
+		<div ng-controller="MouseDownController">
+			<p ng-mousedown="mouseDown()" ng-mouseup="mouseUp()">Klik dan tahan disini kemudian lepaskan.</p>
+
+			<p ng-show="mousedown.fired">Event mousedown fired.</p>
+			<p ng-show="mouseup.fired">Event mouseup fired.</p>
+		</div>
+
+		<script src="../lib/angular.min.js"></script>
+		<script src="app.js"></script>
+	</body>
+</html>
