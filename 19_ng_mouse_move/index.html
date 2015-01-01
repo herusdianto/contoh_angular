@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html ng-app="app">
+	<head>
+		<title>19 - Ng Mouse Move</title>
+	</head>
+
+	<body>
+		<div ng-controller="MouseMoveController">
+			<p ng-mousemove="mouseMove()">Gerakkan mouse disini.</p>
+			
+			<p ng-bind="angka"></p>
+		</div>
+
+		<script src="../lib/angular.min.js"></script>
+		<script src="app.js"></script>
+	</body>
+</html>
