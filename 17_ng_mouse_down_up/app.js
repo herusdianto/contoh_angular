@@ -1,6 +1,6 @@
 var app = angular.module('app', []);
 
-app.controller('MouseDownController', ['$scope', function($scope)
+app.controller('MouseDownUpController', ['$scope', function($scope)
 {
 	$scope.mousedown = {
 		fired: false
