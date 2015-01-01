@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html ng-app="app">
+	<head>
+		<title>2 - Ng Bind</title>
+	</head>
+
+	<body>
+		<div ng-controller="BindController">
+			<h3>{{ teks.kalimat }}</h3>
+
+			<h3 ng-bind="teks.kalimat"></h3>
+		</div>
+
+		<script src="../lib/angular.min.js"></script>
+		<script src="app.js"></script>
+	</body>
+</html>
