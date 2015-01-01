@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="app">
+	<head>
+		<title>3 - Aritmetika</title>
+	</head>
+
+	<body>
+		<div ng-controller="AritmetikaController">
+			<p>1 + 2 = <strong>{{ 1 + 2 }}</strong></p>
+
+			<p>4 - 3 = <strong ng-bind="pengurangan(4, 3)"></strong></p>
+
+			<p>5 x 6 = <strong ng-bind="perkalian(5, 6)"></strong></p>
+
+			<p>8 : 4 = <strong>{{ 8 / 4 }}</strong></p>
+		</div>
+
+		<script src="../lib/angular.min.js"></script>
+		<script src="app.js"></script>
+	</body>
+</html>
