@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html ng-app="app">
+	<head>
+		<title>12 - Ng Change</title>
+	</head>
+
+	<body>
+		<div ng-controller="ChangeController">
+			<p>
+				<input type="text" ng-model="teks" ng-change="changed()">
+			</p>
+		</div>
+
+		<script src="../lib/angular.min.js"></script>
+		<script src="app.js"></script>
+	</body>
+</html>
