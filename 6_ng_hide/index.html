@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app="app">
+	<head>
+		<title>6 - Ng Hide</title>
+	</head>
+
+	<body>
+		<div ng-controller="ClickController">
+			<h1 ng-bind="angka"></h1>
+
+			<button ng-click="tambah()">Tambah</button>
+			<button ng-click="kurang()">Kurang</button>
+
+			<h1 ng-hide="genap()">Ganjil</h1>
+		</div>
+
+		<script src="../lib/angular.min.js"></script>
+		<script src="app.js"></script>
+	</body>
+</html>
