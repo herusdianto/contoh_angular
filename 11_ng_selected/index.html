@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app>
+	<head>
+		<title>11 - Ng Selected</title>
+	</head>
+
+	<body>
+		<div>
+			<p><input type="checkbox" ng-model="heru"> Heru Rusdianto.</p>
+			
+			<p>
+				<select multiple>
+					<option ng-selected="heru">Tampan</option>
+					
+					<option ng-selected="heru">Macho</option>
+
+					<option ng-selected="heru">Kalem</option>
+				</select>
+			</p>
+		</div>
+
+		<script src="../lib/angular.min.js"></script>
+	</body>
+</html>
