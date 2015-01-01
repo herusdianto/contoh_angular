@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app>
+	<head>
+		<title>10 - Ng Readonly</title>
+		<style>
+			input[readonly] {
+				cursor: not-allowed;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div>
+			<p><input type="checkbox" ng-model="readonly"> Ceklis ini untuk merubah input menjadi readonly</p>
+			
+			<p><input type="text" ng-readonly="readonly" value="Ceklis checkbox di atas."></p>
+		</div>
+
+		<script src="../lib/angular.min.js"></script>
+	</body>
+</html>
