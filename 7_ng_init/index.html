@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html ng-app>
+	<head>
+		<title>7 - Ng Init</title>
+	</head>
+
+	<body>
+		<div ng-init="angka = { angka_1: 1, angka_2: 2 }">
+			<p><input type="number" ng-model="angka.angka_1"></p>
+
+			<p><input type="number" ng-model="angka.angka_2"></p>
+
+			<p>Jumlah: <span ng-bind="angka.angka_1 + angka.angka_2"></span></p>
+		</div>
+
+		<script src="../lib/angular.min.js"></script>
+	</body>
+</html>
