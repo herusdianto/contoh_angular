@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="app">
+    <head>
+        <title>21 - Ng Keyup Keypress & Keydown</title>
+    </head>
+
+    <body>
+        <div ng-controller="KeyEventController">
+            <p>
+                <input type="text" ng-keyup="keyupEvent()" ng-keypress="keypressEvent()" ng-keydown="keydownEvent()">
+            </p>
+
+            <p>Keyup: <strong ng-bind="keyup"></strong></p>
+
+            <p>Keypress: <strong ng-bind="keypress"></strong></p>
+
+            <p>Keydown: <strong ng-bind="keydown"></strong></p>
+        </div>
+
+        <script src="../lib/angular.min.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>
