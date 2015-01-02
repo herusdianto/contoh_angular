@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="app">
+    <head>
+        <title>23 - Ng Focus & Ng Blur</title>
+    </head>
+
+    <body>
+        <div ng-controller="FocusBlurController">
+            <p>
+                <input type="text" ng-focus="focusEvent()" ng-blur="blurEvent()" placeholder="Klik disini...">
+            </p>
+
+            <p ng-show="isFocus">Klik disini.</p>
+
+            <p ng-bind="pesan"></p>
+        </div>
+
+        <script src="../lib/angular.min.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>
