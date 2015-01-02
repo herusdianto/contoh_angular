@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="app">
+    <head>
+        <title>20 - Ng Mouse Over</title>
+        <style>
+            .a {
+                margin: 0 auto;
+                width: 500px;
+                background-color: yellow;
+            }
+            .b {
+                margin: 0 20px;
+                background-color: red;
+            }
+            .a, .b {
+                text-align: center;
+            }
+        </style>
+    </head>
+
+    <body ng-controller="MouseOverController">
+        <div class="a" ng-mouseover="mouseOverA()">
+            <span>A</span>
+
+            <div class="b" ng-mouseover="mouseOverB()">
+                <span>B</span>
+            </div>
+
+            <span>A</span>
+        </div>
+
+        <p ng-bind="angka_a"></p>
+        <p ng-bind="angka_b"></p>
+
+        <script src="../lib/angular.min.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>
