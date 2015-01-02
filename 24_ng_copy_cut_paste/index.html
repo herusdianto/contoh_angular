@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="app">
+    <head>
+        <title>24 - Ng Copy, Cut & Paste</title>
+    </head>
+
+    <body>
+        <div ng-controller="CopyCutPasteController">
+            <textarea ng-copy="copyEvent()" ng-cut="cutEvent()" ng-paste="pasteEvent()">Teks untuk demo.</textarea>
+
+            <ol>
+                <li>Klik pada teksarea di atas, tekan Ctrl + A => Ctrl + C => Ctrl + V.</li>
+                <li>Klik pada teksarea di atas, tekan Ctrl + A => Ctrl + X => Ctrl + V.</li>
+            </ol>
+
+            <p ng-bind="pesan"></p>
+        </div>
+
+        <script src="../lib/angular.min.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>
