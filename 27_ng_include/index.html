@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html ng-app="app">
+    <head>
+        <title>27 - Ng Include</title>
+    </head>
+
+    <body>
+        <div ng-controller="IncludeController">
+            <p>Ini dari index.html</p>
+
+            <ng-include src="'lain.html'" onload="loaded()" autoscroll>
+            </ng-include>
+        </div>
+
+        <script src="../lib/angular.min.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>
