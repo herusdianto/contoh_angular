@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app>
+    <head>
+        <title>35 - Ng Script</title>
+    </head>
+
+    <body>
+        <button ng-click="template='template.html'">Load Template</button>
+
+        <div ng-include src="template">
+
+        </div>
+
+
+        <script type="text/ng-template" id="template.html">
+            <p>Ini inline template.</p>
+        </script>
+
+        <script src="../lib/angular.min.js"></script>
+    </body>
+</html>
