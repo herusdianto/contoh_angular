@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html ng-app>
+    <head>
+        <title>33 - Ng Style</title>
+    </head>
+
+    <body>
+        <div>
+            <p ng-style="teks">Ini teks yang akan dirubah cssnya.</p>
+
+            <button ng-click="teks={ 'color': 'blue' }">Color</button>
+            <button ng-click="teks={ 'background-color': 'red' }">Background</button>
+            <button ng-click="teks={ 'font-size': '50px' }">Font Size</button>
+            <button ng-click="teks={}">Reset</button>
+        </div>
+
+        <script src="../lib/angular.min.js"></script>
+    </body>
+</html>
