@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="app">
+    <head>
+        <title>36 - Select</title>
+    </head>
+
+    <body>
+        <div ng-controller="SelectController">
+            <p>
+                Select tanpa group by border:
+
+                <select name="pilihan" ng-model="dipilih" ng-options="pilih.warna for pilih in pilihan"></select>
+            </p>
+
+            <p>
+                Select dengan group by border:
+
+                <select name="pilihan" ng-model="dipilih" ng-options="pilih.warna group by pilih.border for pilih in pilihan"></select>
+            </p>
+
+            <p>Dipilih: {{ dipilih }}</p>
+
+            <div style="height: 100px; border: 5px solid;" ng-style="{ 'background-color': dipilih.warna, 'border-color': dipilih.border }">
+
+            </div>
+        </div>
+
+        <script src="../lib/angular.min.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>
