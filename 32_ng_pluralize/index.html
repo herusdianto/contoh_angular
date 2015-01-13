@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html ng-app>
+    <head>
+        <title>32 - Ng Pluralize</title>
+    </head>
+
+    <body>
+        <div>
+            <p>
+                <h1>Data siswa yang masuk kelas:</h1>
+            </p>
+
+            <p>
+                Siswa 1 : <input type="text" name="siswa_1" ng-model="siswa_1" placeholder="Nama siswa 1">
+            </p>
+
+            <p>
+                Siswa 2 : <input type="text" name="siswa_2" ng-model="siswa_2" placeholder="Nama siswa 2">
+            </p>
+
+            <p>
+                Siswa 3 : <input type="text" name="siswa_3" ng-model="siswa_3" placeholder="Nama siswa 3">
+            </p>
+
+            <p>
+                Jumlah Siswa : <input type="text" name="jumlah_siswa" ng-model="jumlah_siswa" placeholder="Jumlah siswa masuk">
+            </p>
+
+            <p>
+                Tanpa Offset :
+                <ng-pluralize count="jumlah_siswa"
+                    when="{
+                        '0': 'Tidak ada siswa yang masuk kelas.',
+                        'one': 'Ada 1 siswa yang masuk kelas.',
+                        'other': 'Banyak siswa ({}) yang masuk kelas.'
+                    }">
+                </ng-pluralize>
+            </p>
+
+            <p>
+                Offset 3 :
+                <ng-pluralize count="jumlah_siswa" offset="3"
+                    when="{
+                        '0': 'Tidak ada siswa yang masuk kelas.',
+                        '1': '{{ siswa_1 }} masuk kelas.',
+                        '2': '({{ siswa_1 }} & {{ siswa_2 }}) masuk kelas.',
+                        '3': '({{ siswa_1 }}, {{ siswa_2 }} & {{ siswa_3 }}) masuk kelas.',
+                        'one': '({{ siswa_1 }}, {{ siswa_2 }} & {{ siswa_3 }}) dan 1 siswa lainnya masuk kelas.',
+                        'other': '({{ siswa_1 }}, {{ siswa_2 }} & {{ siswa_3 }}) dan {} siswa lainnya masuk kelas.',
+                    }">
+                </ng-pluralize>
+            </p>
+        </div>
+
+        <script src="../lib/angular.min.js"></script>
+    </body>
+</html>
