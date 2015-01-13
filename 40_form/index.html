@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html ng-app>
+    <head>
+        <title>40 - Form</title>
+
+        <style>
+            .ng-invalid {
+                color: red;
+            }
+        </style>
+    </head>
+
+    <body>
+        <form name="formSiswa">
+            <div>
+                <label>Nama Siswa:</label>
+
+                <input type="text" name="nama_siswa" ng-model="nama_siswa" required>
+
+                <span ng-show="formSiswa.nama_siswa.$error.required">Harus diisi!</span>
+            </div>
+
+            <br>
+
+            <div>
+                <label>Umur Siswa:</label>
+
+                <input type="number" name="umur_siswa" ng-model="umur_siswa" required>
+
+                <span ng-show="formSiswa.umur_siswa.$error.required">Harus diisi!</span>
+                <span ng-show="formSiswa.umur_siswa.$error.number">Harus nomor!</span>
+            </div>
+        </form>
+
+        <hr>
+
+        <p>Form Siswa: {{ formSiswa }}</p>
+        <p>formSiswa.$valid = {{ formSiswa.$valid }}</p>
+        <p>formSiswa.$error = {{ formSiswa.$error }}</p>
+
+        <hr>
+
+        <p>Nama Siswa: {{ nama_siswa }}</p>
+        <p>formSiswa.nama_siswa.$valid = {{ formSiswa.nama_siswa.$valid }}</p>
+        <p>formSiswa.nama_siswa.$error = {{ formSiswa.nama_siswa.$error }}</p>
+
+        <hr>
+
+        <p>Umur Siswa: {{ umur_siswa }}</p>
+        <p>formSiswa.umur_siswa.$valid = {{ formSiswa.umur_siswa.$valid }}</p>
+        <p>formSiswa.umur_siswa.$error = {{ formSiswa.umur_siswa.$error }}</p>
+
+        <script src="../lib/angular.min.js"></script>
+    </body>
+</html>
