@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html ng-app>
+    <head>
+        <title>29 - Ng Bind Template</title>
+    </head>
+
+    <body>
+        <div>
+            <input type="text" name="nama_awal" ng-model="nama_awal">
+            <input type="text" name="nama_akhir" ng-model="nama_akhir">
+
+            <p>Nama awal & akhir: <span ng-bind-template="{{ nama_awal }} {{ nama_akhir }}"></span></p>
+        </div>
+
+        <script src="../lib/angular.min.js"></script>
+    </body>
+</html>
