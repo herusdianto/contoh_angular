@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="app">
+    <head>
+        <title>37 - Ng Repeat</title>
+    </head>
+
+    <body>
+        <div ng-controller="RepeatController">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Index</th>
+                        <th>Nama</th>
+                        <th>Umur</th>
+                        <th>Urutan</th>
+                        <th>Tipe</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr ng-repeat="data in siswa">
+                        <td>{{ $index }}</td>
+                        <td>{{ data.nama }}</td>
+                        <td>{{ data.umur }}</td>
+                        <td>
+                            <span ng-show="$first">Pertama</span>
+                            <span ng-show="$middle">Tengah</span>
+                            <span ng-show="$last">Terakhir</span>
+                        </td>
+                        <td>
+                            <span ng-show="$even">Ganjil</span>
+                            <span ng-show="$odd">Genap</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <script src="../lib/angular.min.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>
