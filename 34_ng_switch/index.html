@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app>
+    <head>
+        <title>34 - Ng Switch</title>
+    </head>
+
+    <body>
+        <div>
+            <select name="siswa" ng-model="pilih">
+                <option value="">Pilih Siswa...</option>
+                <option value="heru">Heru</option>
+                <option value="ibnu">Ibnu</option>
+            </select>
+        </div>
+
+        <div ng-switch on="pilih">
+            <p ng-switch-default>Belum ada siswa yang dipilih.</p>
+            <p ng-switch-when="heru">Heru Rusdianto.</p>
+            <p ng-switch-when="ibnu">Ibnu Rusdianto.</p>
+        </div>
+
+        <script src="../lib/angular.min.js"></script>
+    </body>
+</html>
