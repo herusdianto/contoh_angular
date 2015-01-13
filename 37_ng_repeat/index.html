@@ -6,34 +6,26 @@
 
     <body>
         <div ng-controller="RepeatController">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Index</th>
-                        <th>Nama</th>
-                        <th>Umur</th>
-                        <th>Urutan</th>
-                        <th>Tipe</th>
-                    </tr>
-                </thead>
+            <h1 ng-repeat-start="data in siswa">{{ data.nama }}</h1>
 
-                <tbody>
-                    <tr ng-repeat="data in siswa">
-                        <td>{{ $index }}</td>
-                        <td>{{ data.nama }}</td>
-                        <td>{{ data.umur }}</td>
-                        <td>
-                            <span ng-show="$first">Pertama</span>
-                            <span ng-show="$middle">Tengah</span>
-                            <span ng-show="$last">Terakhir</span>
-                        </td>
-                        <td>
-                            <span ng-show="$even">Ganjil</span>
-                            <span ng-show="$odd">Genap</span>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+            <p>
+                Index: {{ $index }}
+                |
+                Nama: {{ data.nama }}
+                |
+                Umur: {{ data.umur }}
+                |
+                Urutan:
+                <span ng-show="$first">Pertama</span>
+                <span ng-show="$middle">Tengah</span>
+                <span ng-show="$last">Terakhir</span>
+                |
+                Tipe:
+                <span ng-show="$even">Ganjil</span>
+                <span ng-show="$odd">Genap</span>
+            </p>
+
+            <hr ng-repeat-end>
         </div>
 
         <script src="../lib/angular.min.js"></script>
