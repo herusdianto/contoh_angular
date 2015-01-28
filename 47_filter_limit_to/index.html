@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html ng-app="app">
+    <head>
+        <title>47 - Filter Limit To</title>
+
+        <style>
+            table, tr, th, td {
+                border: 1px solid #ccc;
+            }
+        </style>
+    </head>
+
+    <body ng-controller="LimitController">
+        <table>
+            <tr>
+                <th>Variable</th>
+                <th>Real</th>
+                <th>Limit</th>
+                <th>Output</th>
+            </tr>
+
+            <tr>
+                <td>arrayAngka</td>
+                <td>{{ arrayAngka }}</td>
+                <td>{{ batasArrayAngka }}</td>
+                <td>{{ arrayAngka | limitTo:batasArrayAngka }}</td>
+            </tr>
+
+            <tr>
+                <td>arrayHuruf</td>
+                <td>{{ arrayHuruf }}</td>
+                <td>{{ batasArrayHuruf }}</td>
+                <td>{{ arrayHuruf | limitTo:batasArrayHuruf }}</td>
+            </tr>
+
+            <tr>
+                <td>angka</td>
+                <td>{{ angka }}</td>
+                <td>{{ batasAngka }}</td>
+                <td>{{ angka | limitTo:batasAngka }}</td>
+            </tr>
+
+            <tr>
+                <td>huruf</td>
+                <td>{{ huruf }}</td>
+                <td>{{ batasHuruf }}</td>
+                <td>{{ huruf | limitTo:batasHuruf }}</td>
+            </tr>
+        </table>
+
+        <script src="../lib/angular.min.js"></script>
+        <script src="app.js"></script>
+    </body>
+</htMl>
