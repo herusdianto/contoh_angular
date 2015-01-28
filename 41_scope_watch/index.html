@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="app">
+    <head>
+        <title>41 - $scope.$watch</title>
+    </head>
+
+    <body ng-controller="WatchController">
+        <input type="text" name="nama" ng-model="nama">
+
+        <p>Model "nama": {{ nama }}</p>
+
+        <p>Nama "nama" sebelumnya: {{ namaSebelumnya }}</p>
+
+        <p>Nama "nama" sekarang: {{ namaSekarang }}</p>
+
+        <p>Nama "nama" dirubah sebanyak: {{ dirubah }} kali.</p>
+
+        <script src="../lib/angular.min.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>
