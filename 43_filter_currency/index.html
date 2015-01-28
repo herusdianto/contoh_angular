@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html ng-app>
+    <head>
+        <title>43 - Filter Currency</title>
+    </head>
+
+    <body>
+        <p>
+            Harga:
+            <input type="number" ng-model="harga">
+        </p>
+
+        <p>Default: {{ harga | currency }}</p>
+
+        <p>Rupiah: {{ harga | currency:"Rp." }}</p>
+
+        <script src="../lib/angular.min.js"></script>
+    </body>
+</html>
