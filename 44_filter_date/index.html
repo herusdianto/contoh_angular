@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html ng-app="app">
+    <head>
+        <title>44 - Filter Date</title>
+
+        <style>
+            table, tr, th, td {
+                border: 1px solid #ccc;
+            }
+        </style>
+    </head>
+
+    <body ng-controller="DateController">
+        <table>
+            <tr>
+                <td>Object tanggal</td>
+                <td>{{ tanggal }}</td>
+            </tr>
+
+            <tr>
+                <td>Filter date default</td>
+                <td>{{ tanggal | date }}</td>
+            </tr>
+
+            <tr>
+                <td>Filter date "yyyy"</td>
+                <td>{{ tanggal | date:"yyyy" }}</td>
+            </tr>
+
+            <tr>
+                <td>Filter date "yy"</td>
+                <td>{{ tanggal | date:"yy" }}</td>
+            </tr>
+
+            <tr>
+                <td>Filter date "y"</td>
+                <td>{{ tanggal | date:"y" }}</td>
+            </tr>
+
+            <tr>
+                <td>Filter date "MMMM"</td>
+                <td>{{ tanggal | date:"MMMM" }}</td>
+            </tr>
+
+            <tr>
+                <td>Filter date "MMM"</td>
+                <td>{{ tanggal | date:"MMM" }}</td>
+            </tr>
+
+            <tr>
+                <td>Filter date "MM"</td>
+                <td>{{ tanggal | date:"MM" }}</td>
+            </tr>
+
+            <tr>
+                <td>Filter date "M"</td>
+                <td>{{ tanggal | date:"M" }}</td>
+            </tr>
+
+            <tr>
+                <td>Filter date "mm"</td>
+                <td>{{ tanggal | date:"mm" }}</td>
+            </tr>
+
+            <tr>
+                <td>Filter date "m"</td>
+                <td>{{ tanggal | date:"m" }}</td>
+            </tr>
+
+            <tr>
+                <td>Filter date "dd"</td>
+                <td>{{ tanggal | date:"dd" }}</td>
+            </tr>
+
+            <tr>
+                <td>Filter date "d"</td>
+                <td>{{ tanggal | date:"d" }}</td>
+            </tr>
+
+            <tr>
+                <td>Filter date "EEEE"</td>
+                <td>{{ tanggal | date:"EEEE" }}</td>
+            </tr>
+
+            <tr>
+                <td>Filter date "EEE"</td>
+                <td>{{ tanggal | date:"EEE" }}</td>
+            </tr>
+
+            <tr>
+                <td>Filter date "HH"</td>
+                <td>{{ tanggal | date:"HH" }}</td>
+            </tr>
+
+            <tr>
+                <td>Filter date "H"</td>
+                <td>{{ tanggal | date:"H" }}</td>
+            </tr>
+
+            <tr>
+                <td>Filter date "hh"</td>
+                <td>{{ tanggal | date:"hh" }}</td>
+            </tr>
+
+            <tr>
+                <td>Filter date "h"</td>
+                <td>{{ tanggal | date:"h" }}</td>
+            </tr>
+
+            <tr>
+                <td>Filter date "ss"</td>
+                <td>{{ tanggal | date:"ss" }}</td>
+            </tr>
+
+            <tr>
+                <td>Filter date "s"</td>
+                <td>{{ tanggal | date:"s" }}</td>
+            </tr>
+
+            <tr>
+                <td>Filter date ".sss"</td>
+                <td>{{ tanggal | date:".sss" }}</td>
+            </tr>
+
+            <tr>
+                <td>Filter date ",sss"</td>
+                <td>{{ tanggal | date:",sss" }}</td>
+            </tr>
+
+            <tr>
+                <td>Filter date "a"</td>
+                <td>{{ tanggal | date:"a" }}</td>
+            </tr>
+
+            <tr>
+                <td>Filter date "Z"</td>
+                <td>{{ tanggal | date:"Z" }}</td>
+            </tr>
+
+            <tr>
+                <td>Filter date "short"</td>
+                <td>{{ tanggal | date:"short" }}</td>
+            </tr>
+
+            <tr>
+                <td>Filter date "medium"</td>
+                <td>{{ tanggal | date:"medium" }}</td>
+            </tr>
+
+            <tr>
+                <td>Filter date "shortDate"</td>
+                <td>{{ tanggal | date:"shortDate" }}</td>
+            </tr>
+
+            <tr>
+                <td>Filter date "mediumDate"</td>
+                <td>{{ tanggal | date:"mediumDate" }}</td>
+            </tr>
+
+            <tr>
+                <td>Filter date "longDate"</td>
+                <td>{{ tanggal | date:"longDate" }}</td>
+            </tr>
+
+             <tr>
+                <td>Filter date "fullDate"</td>
+                <td>{{ tanggal | date:"fullDate" }}</td>
+            </tr>
+
+            <tr>
+                <td>Filter date "shortTime"</td>
+                <td>{{ tanggal | date:"shortTime" }}</td>
+            </tr>
+
+            <tr>
+                <td>Filter date "mediumTime"</td>
+                <td>{{ tanggal | date:"mediumTime" }}</td>
+            </tr>
+
+            <tr>
+                <td>Filter date "'Bulan' MMMM"</td>
+                <td>{{ tanggal | date:"'Bulan' MMMM" }}</td>
+            </tr>
+        </table>
+
+        <script src="../lib/angular.min.js"></script>
+        <script src="app.js"></script>
+    </body>
+</htMl>
