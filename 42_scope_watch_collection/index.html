@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="app">
+    <head>
+        <title>42 - $scope.$watchCollection</title>
+    </head>
+
+    <body ng-controller="WatchCollectionController">
+        <p>
+            Nama:
+            <input type="text" ng-model="siswa.nama">
+        </p>
+
+        <p>
+            Umur:
+            <input type="number" ng-model="siswa.umur">
+        </p>
+
+        <p>
+            Objek siswa sebelumnya: {{ siswaSebelumnya }}
+        </p>
+
+        <p>
+            Objek siswa sekarang: {{ siswaSekarang }}
+        </p>
+
+        <script src="../lib/angular.min.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>
