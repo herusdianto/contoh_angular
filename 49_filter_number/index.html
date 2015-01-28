@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app>
+    <head>
+        <title>49 - Filter Number</title>
+    </head>
+
+    <body>
+        <p>
+            Nomor:
+            <input type="number" ng-init="nomor = 12345.6789" ng-model="nomor">
+        </p>
+
+        <p>Asli: {{ nomor }}</p>
+
+        <p>Filter "number": {{ nomor | number }}</p>
+
+        <p>Filter "number:0": {{ nomor | number:0 }}</p>
+
+        <p>Filter "number:5": {{ nomor | number:5 }}</p>
+
+        <p>Negatif & Filter "number:2": {{ -nomor | number:2 }}</p>
+
+        <script src="../lib/angular.min.js"></script>
+    </body>
+</html>
