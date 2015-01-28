@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="app">
+    <head>
+        <title>52 - Filter Linky</title>
+    </head>
+
+    <style>
+        textarea {
+            width: 100%;
+            height: 100px;
+        }
+    </style>
+
+    <body ng-controller="LinkyController">
+        <p>
+            <textarea ng-model="teks"></textarea>
+        </p>
+
+        <p>
+            <strong>Escaped:</strong>
+            <br>
+            {{ teks | linky }}
+        </p>
+
+        <p>
+            <strong>HTML:</strong>
+            <br>
+            <span ng-bind-html="teks | linky"></span>
+        </p>
+
+        <p>
+            <strong>Link + Target:</strong>
+            <br>
+            <span ng-bind-html="teks | linky:'_blank'"></span>
+        </p>
+
+        <script src="../lib/angular.min.js"></script>
+        <script src="../lib/angular-sanitize.min.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>
