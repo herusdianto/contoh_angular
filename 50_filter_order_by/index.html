@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="app">
+    <head>
+        <title>50 - Filter Order By</title>
+
+        <style>
+            table, tr, th, td {
+                border: 1px solid #ccc;
+            }
+        </style>
+    </head>
+
+    <body ng-controller="OrderController">
+        <p>Klik header tabel untuk merubah urutan.</p>
+
+        <table>
+            <tr>
+                <th ng-click="order = 'nama'">Nama</th>
+                <th ng-click="order = 'umur'">Umur</th>
+            </tr>
+
+            <tr ng-repeat="data in siswa | orderBy:order:reverse">
+                <td>{{ data.nama }}</td>
+                <td>{{ data.umur }}</td>
+            </tr>
+        </table>
+
+        <a href="#" ng-click="reverse = ! reverse">Reverse order</a>
+
+        <script src="../lib/angular.min.js"></script>
+        <script src="app.js"></script>
+    </body>
+</htMl>
