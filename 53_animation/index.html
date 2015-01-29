@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="app">
+    <head>
+        <title>53 - Animation</title>
+
+        <link rel="stylesheet" href="../lib/animate.min.css">
+
+        <style>
+            body {
+                margin: 0 auto;
+                text-align: center;
+                font-size: 30px
+            }
+            .data-siswa.ng-enter, .data-siswa.ng-move
+            {
+                -webkit-animation: bounceIn 1s;
+                -moz-animation: bounceIn 1s;
+                -o-animation: bounceIn 1s;
+                animation: bounceIn 1s;
+            }
+            .data-siswa.ng-leave
+            {
+                -webkit-animation: bounceOut 1s;
+                -moz-animation: bounceOut 1s;
+                -o-animation: bounceOut 1s;
+                animation: bounceOut 1s;
+            }
+        </style>
+    </head>
+
+    <body ng-controller="AnimationController">
+        <p>
+            Cari:
+            <input type="text" ng-model="cari">
+        </p>
+
+        <div>
+            <p ng-repeat="data in siswa | filter:cari" class="data-siswa">{{ data }}</p>
+        </div>
+
+        <script src="../lib/angular.min.js"></script>
+        <script src="../lib/angular-animate.min.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>
