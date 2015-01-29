@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="app">
+    <head>
+        <title>55 - Custom Filter</title>
+
+        <style>
+            table, tr, th, td {
+                border: 1px solid #ccc;
+            }
+        </style>
+    </head>
+
+    <body ng-controller="CustomFilterController">
+        <p>
+            Umur:
+            <input type="text" name="umur" ng-model="umur">
+        </p>
+
+        <table>
+            <tr>
+                <th>Nama</th>
+                <th>Umur</th>
+            </tr>
+
+            <tr ng-repeat="data in siswa | muda:umur">
+                <td>{{ data.nama }}</td>
+                <td>{{ data.umur }}</td>
+            </tr>
+        </table>
+
+        <p>Data asli model siswa:</p>
+
+        <p>{{ siswa }}</p>
+
+        <script src="../lib/angular.min.js"></script>
+        <script src="app.js"></script>
+    </body>
+</htMl>
