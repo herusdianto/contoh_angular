@@ -15,17 +15,9 @@ app.factory('UserFactory', function()
     var umur = 21;
 
     return {
-        setNama: function(namaBaru)
-        {
-            nama = namaBaru;
-        },
         getNama: function()
         {
             return nama;
-        },
-        setUmur: function(umurBaru)
-        {
-            umur = umurBaru;
         },
         getUmur: function()
         {
