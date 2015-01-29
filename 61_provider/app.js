@@ -1,11 +1,11 @@
 var app = angular.module('app', []);
 
-app.controller('ProviderController', ['$scope', 'User', function($scope, User)
+app.controller('ProviderController', ['$scope', 'Teks', function($scope, Teks)
 {
-    $scope.teks = User.getTeks();
+    $scope.teks = Teks.getTeks();
 }]);
 
-app.provider('User', function()
+app.provider('Teks', function()
 {
     var teks = 'Teks ini akan dirubah pada config.';
 
@@ -26,7 +26,7 @@ app.provider('User', function()
     };
 });
 
-app.config(['UserProvider', function(UserProvider)
+app.config(['TeksProvider', function(TeksProvider)
 {
-    UserProvider.setTeks('Ini teks dari config.');
+    TeksProvider.setTeks('Ini teks dari config.');
 }]);
