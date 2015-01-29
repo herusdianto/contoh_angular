@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app>
+    <head>
+        <title>56 - Validasi Form</title>
+
+        <style>
+            input.ng-invalid.ng-dirty {
+                background-color: red;
+            }
+            input.ng-valid.ng-dirty {
+                background-color: green;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <form name="formProfil" novalidate>
+            <div>
+                <label>Nama</label>
+                <input type="text" name="nama" ng-model="profil.nama" required>
+                <span ng-show="formProfil.nama.$dirty && formProfil.nama.$error.required">Harus diisi.</span>
+            </div>
+
+            <div>
+                <label>Email</label>
+                <input type="email" name="email" ng-model="profil.email" required>
+                <span ng-show="formProfil.email.$dirty && formProfil.email.$error.required">Harus diisi.</span>
+                <span ng-show="formProfil.email.$dirty && formProfil.email.$error.email">Bukan email.</span>
+            </div>
+
+            <div>
+                <label>Password</label>
+                <input type="password" name="password" ng-model="profil.password" required>
+                <span ng-show="formProfil.password.$dirty && formProfil.password.$error.required">Harus diisi.</span>
+            </div>
+
+            <div>
+                <button>Simpan</button>
+            </div>
+        </form>
+
+        <p>Model "profil": {{ profil }}</p>
+
+        <script src="../lib/angular.min.js"></script>
+    </body>
+</htMl>
