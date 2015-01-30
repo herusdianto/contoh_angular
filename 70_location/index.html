@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="app">
+    <head>
+        <title>70 - Location</title>
+    </head>
+
+    <body ng-controller="LocationController">
+        <p>absUrl(): {{ abs }}</p>
+
+        <p>url(): {{ url }}</p>
+
+        <p>protocol(): {{ protocol }}</p>
+
+        <p>host(): {{ host }}</p>
+
+        <p>port(): {{ port }}</p>
+
+        <p>path(): {{ path }}</p>
+
+        <p>search(): {{ search }}</p>
+
+        <p>
+            <button ng-click="rubahUrl()">setter url()</button>
+            <button ng-click="rubahPath()">setter path()</button>
+            <button ng-click="rubahSearch()">setter search()</button>
+        </p>
+
+        <script src="../lib/angular.min.js"></script>
+        <script src="app.js"></script>
+    </body>
+</htMl>
