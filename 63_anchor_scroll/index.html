@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="app">
+    <head>
+        <title>63 - anchorScroll</title>
+
+        <style>
+            .container {
+                height: 300px;
+                overflow: auto;
+            }
+            a {
+                cursor: pointer;
+            }
+            #umur {
+                margin-top: 5000px;
+            }
+        </style>
+    </head>
+
+    <body ng-controller="anchorScrollController">
+        <div class="container">
+            <div id="nama">
+                <p>Nama: Heru</p>
+                <p><a ng-click="scrollUmur()">Klik untuk scroll ke umur</a></p>
+            </div>
+
+            <div id="umur">
+                <p>Umur: 21</p>
+            </div>
+        </div>
+
+
+        <script src="../lib/angular.min.js"></script>
+        <script src="app.js"></script>
+    </body>
+</htMl>
