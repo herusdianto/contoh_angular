@@ -1,6 +1,6 @@
 var app = angular.module('app', []);
 
-app.controller('IsArrayController', ['$scope', function($scope)
+app.controller('IsDateController', ['$scope', function($scope)
 {
     var string = '12-03-2015';
 
